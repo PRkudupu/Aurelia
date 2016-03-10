@@ -1,8 +1,5 @@
 ﻿<template>
-    <div>
-        ${message}
-    </div>
-    <!--Binding expression-->
-    <button click.trigger="ChangeMessage()">Change Message</button>
-    <!--Custom html element-->
+    <div>${message}</div>
+    <button click.trigger="ChangeMessage()">Change message</button>
+    <compose view-model="currentDate"></compose>
 </template>
