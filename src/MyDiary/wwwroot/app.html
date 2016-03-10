@@ -1,5 +1,17 @@
 ﻿<template>
-    <div>${message}</div>
+    <!--<div>${message}</div>-->
+    <div>You have ${movies.length} movies.</div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+        <!--Custom attribute-->
+        <tr repeat.for="movie of movies">
+            <td>${movie.title}</td>
+            <td>${movie.releaseYear}</td>
+        </tr>
+    </table>
     <button click.trigger="ChangeMessage()">Change message</button>
     <compose view-model="currentDate"></compose>
 </template>
