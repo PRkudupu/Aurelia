@@ -1,19 +1,25 @@
 ﻿<template>
-    <div>
-        <div id="div" class="container">
-            firstName:
-            <input type="text" value.one-way="firstName"/>
-            lastName
-            <input type="text" value.two-way="lastName"/>
-            <p>FullName ${fullName}</p>
-            <br/>
-            Friends Name : <input value.bind="potentialFriend"/>
-            <button click.trigger="addfriend()">Add friend</button>
+    <div id="div" class="container">
+        <h2>${message}</h2>
+        <br/>
+        FirstName:
+        <input type="text" value.one-way="firstName"/>
+        LastName:
+        <input type="text" value.two-way="lastName"/>
+        Full Name :
+        ${fullName}
+        <div>
+            <br />
+            Potential friend
+            <input type="text" value.bind="potentialFriend"/>
+            <button click.trigger="addFriend()" class="btn btn-primary ">ADD Friend</button>
             <ul>
                 <li repeat.for="friend of friends">
                     ${friend}
+                    <button click.trigger="$parent.delete($index)">delete</button>
                 </li>
             </ul>
+            
         </div>
-    </div>
+  </div>
 </template>
