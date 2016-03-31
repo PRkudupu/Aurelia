@@ -13,13 +13,18 @@ export class App {
     configureRouter(config, router) {
         this.router = router;
             config.map([
-                { route:["", "list"], moduleId:"movies/list", 
+                { route:["", "list"], moduleId:"authors/list", 
                     title:"List", nav:true, name:"home" },
-
                 { route:"about", moduleId:"about/about", 
                     title:"About", nav:true},
-
-                { route:"details/:id", moduleId:"movies/details" }
+                { route:"binding",moduleId:"binding/binding", 
+                title:"Binding",nav:true},
+                { route:"List",moduleId:"person/list", 
+                title:"Person",nav:true},
+                { route:"HelloWorld",moduleId:"helloworld/helloworld", 
+                     title:"Helloworld",nav:true},
+                { route:"details/:id", moduleId:"authors/details" }
+                
             ]);
     }
     

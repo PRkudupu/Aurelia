@@ -6757,4 +6757,8 @@ button.close {
     display: none !important;
   }
 }
+.navbar-inverse {
+    background-color: #003d99;
+    border-color: #080808;
+}
 /*# sourceMappingURL=bootstrap.css.map */
